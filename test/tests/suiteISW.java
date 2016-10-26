@@ -11,7 +11,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
     
-tests.ModuloAritmeticaTest.class
+tests.ModuloAritmeticaTest.class,
+tests.AlumnoTest.class
         
 })
 
