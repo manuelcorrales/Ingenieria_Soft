@@ -5,6 +5,7 @@ package tests;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import junit.framework.Assert;
 import unittestsisw.*;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,18 +42,25 @@ public class AlumnoTest {
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void nuevoAlumnoTest(){
+    Alumno a = new Alumno();
+    int nivel = a.getNivelAlumno().getNumeroNivel();
+    assertEquals(nivel, 0);
+    }
 
     @Test
     public void metodoSubirNivelTest(){
     Alumno a = new Alumno();
+    int numeroNivelEsperado = 1;
     a.subirNivel();
+    assertEquals(a.getNivelAlumno().getNumeroNivel(), numeroNivelEsperado);
     }
     
     @Test
-    public void atributoNivelTest(){
+    public void atributoNivelNoNuloTest(){
     Alumno a = new Alumno();
-    Nivel nivel = a.getNivelAlumno();
+    assertNotNull(a.getNivelAlumno());  
     }
 }
-
-

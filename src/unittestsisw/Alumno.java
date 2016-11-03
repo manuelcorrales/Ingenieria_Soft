@@ -13,5 +13,9 @@ public class Alumno {
     }
     
     public void subirNivel(){
+        int nivelActual = this.getNivelAlumno().getNumeroNivel();
+        Nivel nuevoNivel = new Nivel(nivelActual+1);
+        this.setNivelAlumno(nuevoNivel);
+        
     }
 }
